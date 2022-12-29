@@ -183,16 +183,17 @@ _Difference between template and templateUrl in the xxx.component.ts_
 - because it can contain multiple css files/ stylesheets
 - you include multiple css files for different users e.g. premium users, regular users, light/dark modes
 
-**Angular Material**
+**_Angular Material_**
 An angular library introduced in Angular 10.
 ng add @angular/material
 
-**Directive**
+**_Directive_**
 The elements which will lend extra features for the angular elements.
 You can only use this with Angular.
 Used to modify the behaviour of elements.
-(1) Component directive - every Angular app has the app component as the component directive by default
-(2) Structural directive - used to design and add features for html layouts, responsible for shaping/ reshaping/ adding/ removing/ manipulating elements. Represented by "\*" symbol.
+
+_(1) Component directive_ - every Angular app has the app component as the component directive by default
+_(2) Structural directive_ - used to design and add features for html layouts, responsible for shaping/ reshaping/ adding/ removing/ manipulating elements. Represented by "\*" symbol.
 Let's check it out:
 
 > a--> \*ngIf
@@ -204,9 +205,9 @@ Let's check it out:
 - template reference variable --> ng template is used for error msgs i.e. "<ng-template> tag"
 
 - Update element: if condition is true, then it will update the message or element "then updated"
-<h2 *ngIf="val && val1; then updated; else val2">
-  This is a structural directive
-</h2>
+  > "<h2 \*ngIf="val && val1; then updated; else val2">"
+  > "This is a structural directive"
+  > "</h2>"
 - Update element also uses <ng-template> tag
 
 > b--> \*ngFor
@@ -233,18 +234,22 @@ Let's check it out:
 - can assign an object to declare the classes
 - can also use a function that returns a class value
 
-_DATA BINDING_
+---
+
+**_DATA BINDING_**
 --> Means sending data from controller to view, or from view to controller. This has been one-way data binding so far.
 --> Data binding defines how data flows in an Angular application
 --> We have been using the flower braces to wrap around a variable name e.g. {{name}}
 Important notes:
 
 1. One way data binding (.ts to .html)
-   a. String interpolation
-   b.Property binding
-   c. Style binding
-   d. Attribute binding
-   e. Event binding
+   #^a. String interpolation
+   #^b.Property binding
+   #^c. Style binding
+   #^d. Attribute binding
+   #^e. Event binding
 2. T
 
-(3) Attribute directive
+---
+
+_(3) Attribute directive_
