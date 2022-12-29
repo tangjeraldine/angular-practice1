@@ -81,6 +81,27 @@
   <div *ngSwitchDefault>Person is not athletic at all</div>
 </div>
 
-<div [ngStyle]="{ color: 'red' }">
+<div [ngStyle]="{ color: color, 'background-color': bgcolor, border: border }">
   <h1>this is a ngStyle element!</h1>
+</div>
+
+<div
+  [ngStyle]="{
+    color: color === 'blue' ? 'pink' : 'white',
+    'background-color': 'black'
+  }"
+>
+  <h2>Ternary operators are cool</h2>
+</div>
+
+<div [ngClass]="'b c'">
+  <h1>testing ngClass</h1>
+</div>
+
+<div [ngClass]="classes">
+  <h1>testing another instance of ngClass</h1>
+</div>
+
+<div [ngClass]="tern === 50 ? 'a' : 'd'">
+  <h1>TERNARY OPERATORS WITH NGCLASS</h1>
 </div>

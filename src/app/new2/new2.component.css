@@ -1,3 +1,22 @@
 div {
-  border: 2px solid red;
+  border: 1px solid black;
+}
+
+.a {
+  background-color: yellow;
+  color: coral;
+}
+
+.b {
+  background-color: orange;
+}
+
+.c {
+  border-radius: 100px;
+  border: 5px dashed blueviolet;
+}
+
+.d {
+  border: 5px red;
+  border-style: dotted;
 }

@@ -33,4 +33,9 @@ obj = [
   }
 ]
 game=22
+color = "blue"
+bgcolor = "chartreuse"
+border = "dashed"
+classes = "a d"
+tern=5
 }
