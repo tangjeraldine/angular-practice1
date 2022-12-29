@@ -223,5 +223,28 @@ Let's check it out:
 > d --> ngStyle
 
 - lets you put styling for the element dynamically
+- syntax in [ngStyle]
+- can be used in conjunction with ternary operators
+
+> e --> ngClass
+
+- multiple classes can be assigned to a variable
+- Can use ternary operator in conjunction
+- can assign an object to declare the classes
+- can also use a function that returns a class value
+
+_DATA BINDING_
+--> Means sending data from controller to view, or from view to controller. This has been one-way data binding so far.
+--> Data binding defines how data flows in an Angular application
+--> We have been using the flower braces to wrap around a variable name e.g. {{name}}
+Important notes:
+
+1. One way data binding (.ts to .html)
+   a. String interpolation
+   b.Property binding
+   c. Style binding
+   d. Attribute binding
+   e. Event binding
+2. T
 
 (3) Attribute directive

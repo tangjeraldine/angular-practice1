@@ -38,4 +38,10 @@ bgcolor = "chartreuse"
 border = "dashed"
 classes = "a d"
 tern=5
+a="a"
+c="c"
+
+func() {
+  return this.a;
+}
 }

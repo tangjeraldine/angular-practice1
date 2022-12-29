@@ -70,7 +70,7 @@
     </div>
   </li>
 </ol> -->
-
+<!-- 
 <div [ngSwitch]="game">
   <div *ngSwitchCase="'badminton'">Person plays badminton</div>
   <div *ngSwitchCase="'cricket'">Person plays cricket</div>
@@ -104,4 +104,13 @@
 
 <div [ngClass]="tern === 50 ? 'a' : 'd'">
   <h1>TERNARY OPERATORS WITH NGCLASS</h1>
+</div>
+
+<div [ngClass]="{ a: false, c: true }">
+  <h4>the styles are woozy</h4>
+  <h3>setting classes using object syntax</h3>
+</div> -->
+
+<div [ngClass]="func()">
+  <h2>Hello! Applying the style using a return of the function.</h2>
 </div>
