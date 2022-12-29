@@ -243,11 +243,11 @@ Let's check it out:
 Important notes:
 
 1. One way data binding (.ts to .html)
-   #^a. String interpolation
-   #^b.Property binding
-   #^c. Style binding
-   #^d. Attribute binding
-   #^e. Event binding
+   - a. String interpolation
+   - b.Property binding
+   - c. Style binding
+   - d. Attribute binding
+   - e. Event binding
 2. T
 
 ---
