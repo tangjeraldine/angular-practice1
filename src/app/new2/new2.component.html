@@ -1,0 +1,82 @@
+<!-- <div>
+  <p>new2 works!</p>
+  <h1>This is new2, hello</h1>
+  <h2>This is the heading for a new stylesheet in new2</h2>
+  <br />
+  <button mat-raised-button>Basic Button</button>
+  <br />
+  <button mat-raised-button color="primary">Primary Button</button>
+  <br />
+  <button
+    mat-icon-button
+    color="warn"
+    aria-label="Example icon button with a heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+</div> -->
+<!-- <h2>No structural directive!</h2>
+<h2 *ngIf="val || val1; then updated; else val2">
+  This is a structural directive
+</h2>
+
+<ng-template #val2> <h1>This is the error message</h1> </ng-template>
+
+<ng-template #updated> This is an updated message </ng-template> -->
+
+<!-- <p *ngFor="let key of obj">{{ key.rollnum }}</p>
+<!--concept of string interpolation-->
+{{ val }}
+<br />
+{{ obj[1].name }}
+<br />
+<!-- <ol>
+  <li *ngFor="let key of obj">
+    <ul>
+      <li>Rollnum: {{ key.rollnum }}</li>
+      <li>Name: {{ key.name }}</li>
+      <li>Age: {{ key.age }}</li>
+    </ul>
+  </li>
+</ol> -->
+<br />
+<!-- <ul>
+  <li
+    *ngFor="
+      let key of obj;
+      index as i;
+      first as f;
+      even as e;
+      odd as o;
+      last as l
+    "
+  >
+    {{ i }} {{ key.rollnum }} {{ key.name }}
+    <p *ngIf="f" style="background-color: aqua">this is the first element</p>
+    <p *ngIf="l" style="background-color: coral">this is the last element</p> -->
+<!--first as f means you can print a message along with the first item, etc-->
+<!-- <p *ngIf="e" style="background-color: red">this is an even element</p>
+    <p *ngIf="o" style="background-color: yellow">this is an odd element</p>
+  </li>
+</ul> -->
+
+<!-- <ol>
+  <li *ngFor="let key of obj; index as i; even as e; odd as o">
+    <div *ngIf="e" style="background-color: red">
+      {{ key.rollnum }} {{ key.name }}
+    </div>
+    <div *ngIf="o" style="background-color: yellow">
+      {{ key.rollnum }} {{ key.name }}
+    </div>
+  </li>
+</ol> -->
+
+<div [ngSwitch]="game">
+  <div *ngSwitchCase="'badminton'">Person plays badminton</div>
+  <div *ngSwitchCase="'cricket'">Person plays cricket</div>
+  <div *ngSwitchCase="'squash'">Person plays squash</div>
+  <div *ngSwitchCase="'frisbee'">Person plays frisbee</div>
+  <div *ngSwitchCase="'billiard'">Person plays billiard</div>
+  <div *ngSwitchCase="22">Person is 22 years old</div>
+  <div *ngSwitchDefault>Person is not athletic at all</div>
+</div>
