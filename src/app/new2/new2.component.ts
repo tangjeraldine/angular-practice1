@@ -38,10 +38,23 @@ bgcolor = "chartreuse"
 border = "dashed"
 classes = "a d"
 tern=5
+num=2
 a="a"
 c="c"
-
+content = "I'm changing the innerHTML"
+headingRow="title for the table"
+e="not loading the image"
 func() {
   return this.a;
+}
+fun1() {
+  console.log("Hi! I'm fun1.");
+}
+fun2() {
+  console.log("Wheeeee!");
+}
+keyfunc1(m:number, n:number, o:number) {
+  console.log("Typing...");
+  console.log(m, n, o);
 }
 }

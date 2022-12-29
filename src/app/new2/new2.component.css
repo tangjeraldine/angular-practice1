@@ -20,3 +20,11 @@ div {
   border: 5px red;
   border-style: dotted;
 }
+
+table,
+tr,
+th,
+td {
+  border: 2px solid;
+  border-collapse: collapse;
+}

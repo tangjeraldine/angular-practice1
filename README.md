@@ -193,6 +193,7 @@ You can only use this with Angular.
 Used to modify the behaviour of elements.
 
 _(1) Component directive_ - every Angular app has the app component as the component directive by default
+
 _(2) Structural directive_ - used to design and add features for html layouts, responsible for shaping/ reshaping/ adding/ removing/ manipulating elements. Represented by "\*" symbol.
 Let's check it out:
 

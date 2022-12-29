@@ -111,6 +111,42 @@
   <h3>setting classes using object syntax</h3>
 </div> -->
 
-<div [ngClass]="func()">
+<!-- <div [ngClass]="func()">
   <h2>Hello! Applying the style using a return of the function.</h2>
-</div>
+</div> -->
+
+<table>
+  <!--If you hover your mouse over it-->
+  <tr [title]="headingRow">
+    <th [attr.colspan]="num">Roll number</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+  <tr *ngFor="let key of obj">
+    <td>{{ key.rollnum }}</td>
+    <td>{{ key.name }}</td>
+    <td>{{ key.age }}</td>
+  </tr>
+</table>
+
+<h2 [innerHTML]="content">This is a innerHTML property</h2>
+
+<img [src]="'pic'" alt="e" />
+
+<h2 [style.color]="color">This is a style binding</h2>
+
+<h2 [style.color]="color" [style.background-color]="'yellow'">
+  This is a style binding
+</h2>
+
+<p [attr.title]="headingRow">this is the attribute binding</p>
+<!--If you hover your mouse over it-->
+
+<button (click)="fun1()">Click Me!</button>
+<br />
+<button (mouseover)="fun2()">Mouseover me.</button>
+<br />
+<input type="text" (keyup)="keyfunc1(1, 2, 3)" />
+<br />
+<!-- <input type="text" (focus)="keyfunc1()" /> -->
