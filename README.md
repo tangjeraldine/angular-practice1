@@ -184,17 +184,23 @@ _Difference between template and templateUrl in the xxx.component.ts_
 - you include multiple css files for different users e.g. premium users, regular users, light/dark modes
 
 **_Angular Material_**
+<br>
 An angular library introduced in Angular 10.
 ng add @angular/material
 
 **_Directive_**
+<br>
 The elements which will lend extra features for the angular elements.
 You can only use this with Angular.
 Used to modify the behaviour of elements.
 
-_(1) Component directive_ - every Angular app has the app component as the component directive by default
-
-_(2) Structural directive_ - used to design and add features for html layouts, responsible for shaping/ reshaping/ adding/ removing/ manipulating elements. Represented by "\*" symbol.
+_(1) Component directive_
+<br>
+Every Angular app has the app component as the component directive by default
+<br>
+_(2) Structural directive_
+<br>
+Used to design and add features for html layouts, responsible for shaping/ reshaping/ adding/ removing/ manipulating elements. Represented by "\*" symbol.
 Let's check it out:
 
 > a--> \*ngIf
@@ -206,9 +212,9 @@ Let's check it out:
 - template reference variable --> ng template is used for error msgs i.e. "<ng-template> tag"
 
 - Update element: if condition is true, then it will update the message or element "then updated"
-  > "<h2 \*ngIf="val && val1; then updated; else val2">"
-  > "This is a structural directive"
-  > "</h2>"
+  > "<h2 \*ngIf="val && val1; then updated; else val2">" <br>
+  > "This is a structural directive" <br>
+  > " \</h2> "
 - Update element also uses <ng-template> tag
 
 > b--> \*ngFor
@@ -244,11 +250,36 @@ Let's check it out:
 Important notes:
 
 1. One way data binding (.ts to .html)
+
    - a. String interpolation
+     - bind data from component to view
+     - one way flow
+     - could be integer, strings, objects, arrays, etc
+     - syntax is {{xxx}}
+       <br>
    - b.Property binding
+
+     - allows us to bind property from component to view
+     - properties title, placeholder, innerhtml etc
+     - syntax [property_name ]= "variable"
+
+       <br>
+
    - c. Style binding
+     - syntax [style.property ]="variable
+       <br>
    - d. Attribute binding
+     - Binds attributes
+     - Quite similar to property binding, actually
+     - Sometimes we use this because some properties in property binding is not supported
+     - e.g. colspan. This needs to be put in [attr.colspan ] and not [colspan ]
+     - syntax [attr.attribute_name ] = "variable"
+       <br>
    - e. Event binding
+     - This binds the event from component to view (still in one-way data binding)
+     - syntax (event_name) = "function()"
+       <br>
+
 2. T
 
 ---
