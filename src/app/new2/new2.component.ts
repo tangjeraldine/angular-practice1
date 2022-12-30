@@ -38,10 +38,12 @@ bgcolor = "chartreuse"
 border = "dashed"
 classes = "a d"
 tern=5
+terndec = 8.2319283700123
 num=2
 a="a"
 c="c"
 content = "I'm changing the innerHTML"
+content2 = "TACO CAT BACKWARDS IS TACO CAT"
 headingRow="title for the table"
 e="not loading the image"
 func() {
@@ -57,4 +59,5 @@ keyfunc1(m:number, n:number, o:number) {
   console.log("Typing...");
   console.log(m, n, o);
 }
+date = Date.now();
 }

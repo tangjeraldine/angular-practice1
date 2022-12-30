@@ -25,11 +25,11 @@
 <ng-template #updated> This is an updated message </ng-template> -->
 
 <!-- <p *ngFor="let key of obj">{{ key.rollnum }}</p>
-<!--concept of string interpolation-->
-{{ val }}
+concept of string interpolation-->
+<!-- {{ val }}
 <br />
 {{ obj[1].name }}
-<br />
+<br /> -->
 <!-- <ol>
   <li *ngFor="let key of obj">
     <ul>
@@ -115,9 +115,9 @@
   <h2>Hello! Applying the style using a return of the function.</h2>
 </div> -->
 
-<table>
-  <!--If you hover your mouse over it-->
-  <tr [title]="headingRow">
+<!-- <table> -->
+<!--If you hover your mouse over it-->
+<!-- <tr [title]="headingRow">
     <th [attr.colspan]="num">Roll number</th>
     <th>Name</th>
     <th>Age</th>
@@ -140,13 +140,67 @@
   This is a style binding
 </h2>
 
-<p [attr.title]="headingRow">this is the attribute binding</p>
+<p [attr.title]="headingRow">this is the attribute binding</p> -->
 <!--If you hover your mouse over it-->
 
-<button (click)="fun1()">Click Me!</button>
+<!-- <button (click)="fun1()">Click Me!</button>
 <br />
 <button (mouseover)="fun2()">Mouseover me.</button>
 <br />
 <input type="text" (keyup)="keyfunc1(1, 2, 3)" />
-<br />
+<br /> -->
 <!-- <input type="text" (focus)="keyfunc1()" /> -->
+
+<!--You need to import the forms module in app.module.ts first-->
+<input type="text" [(ngModel)]="content" />
+{{ content }}
+<!--From here, you can see that when you change "content" in the UI, the value of the content variable changes too-->
+<br />
+<hr />
+<br />
+<input type="number" [(ngModel)]="tern" />
+{{ tern }}
+<br />
+<hr />
+<br />
+<p *ngIf="tern <= 10" [ngStyle]="{ color: 'red' }">
+  this value should be greater than 10!
+</p>
+<br /><br />
+<p>{{ content }}</p>
+<p>{{ content | uppercase }}</p>
+<br />
+<p>{{ content2 }}</p>
+<p>{{ content2 | lowercase }}</p>
+<br />
+<p>{{ date }}</p>
+<p>{{ date | date }}</p>
+<br />
+<p>{{ tern }}</p>
+<p>{{ tern | currency : "JPY" }}</p>
+<p>{{ tern | percent }}</p>
+<br />
+<hr />
+<br />
+<div *ngFor="let key of obj">
+  <p>Rollnum: {{ key.rollnum }}</p>
+  <p>Name: {{ key.name }}</p>
+  <p>Age: {{ key.age }}</p>
+</div>
+<hr />
+<p>{{ obj[0].name | json }}</p>
+<br />
+<p>{{ date | date : "long" }}</p>
+<p>{{ date | date : "short" }}</p>
+<p>{{ date | date : "dd-MM-yyyy" }}</p>
+<p>{{ date | date : "dd-MMM-yyyy" }}</p>
+<br />
+<p>{{ tern | percent : "5.2-4" }}</p>
+<p>{{ terndec | percent : "2.2-3" }}</p>
+<br />
+<hr />
+<br />
+<p>{{ date | date : "dd-MMM-yyyy" | lowercase }}</p>
+<p>{{ obj | json | uppercase }}</p>
+<br />
+<br /><br /><br />
