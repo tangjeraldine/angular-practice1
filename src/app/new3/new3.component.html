@@ -2,3 +2,47 @@
 <h2>I'm new3!</h2>
 <h3>Introducing myself from new3!</h3>
 <hr />
+
+val of param1 is {{ val }}
+<br />
+val2 of param2 is {{ val2 }}
+
+<br /><br />
+<table>
+  <!--If you hover your mouse over it-->
+  <tr>
+    <th [attr.colspan]="colspan">Roll number</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+  <tr *ngFor="let key of obj">
+    <td>{{ key.rollnum }}</td>
+    <td>{{ key.name }}</td>
+    <td>{{ key.age }}</td>
+    <td>
+      <a [routerLink]="['/angulardemo', key.rollnum, 'edit']">EDIT</a> |
+      <a [routerLink]="['/angulardemo', key.rollnum, 'delete']">DELETE</a>
+    </td>
+    <td>
+      <button (click)="openModal()">View Details</button>
+    </td>
+  </tr>
+</table>
+<!-- <ng-template #updated>
+  <ol>
+    <li>
+      <mat-form-field appearance="fill">
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="name" />
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="animal">
+      You chose: <i>{{ animal }}</i> 
+    </li>
+  </ol>
+</ng-template> -->
+<!-- *ngIf="open; then updated" -->

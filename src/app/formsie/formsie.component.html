@@ -1,0 +1,71 @@
+<p>formsie works!</p>
+
+<input type="text" [(ngModel)]="formval1" />
+<br />
+{{ formval1 }}
+<br />
+<!--You can use any name for your form, but you gotta specify the type of your form, which is an ngForm, then pass your form name into the function-->
+<form #add2Form="ngForm" (submit)="fun1(add2Form)">
+  <!--when you use a form tag, you need to put an name property into the input-->
+  <fieldset>
+    <legend>TEMPLATE DRIVEN FORM</legend>
+
+    <button (click)="preloadval(add2Form)">Preload Input Fields</button>
+    <br /><br />
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      [(ngModel)]="formname"
+      name="formname"
+      required
+      minlength="10"
+      maxlength="50"
+    />
+    <br />
+    <label for="gender">Gender:</label>
+    <span>Male</span>
+    <input
+      type="radio"
+      [(ngModel)]="formgender"
+      name="formgender"
+      value="Male"
+      required
+    />
+    |
+    <span>Female</span>
+    <input
+      type="radio"
+      [(ngModel)]="formgender"
+      name="formgender"
+      value="Female"
+      required
+    />
+    <br />
+    <label for="phone">Mobile No.:</label>
+    <input type="phone" [(ngModel)]="formphone" name="formphone" required />
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" [(ngModel)]="formemail" name="formemail" required />
+    <br />
+    <label for="method">Preferred Contact Method:</label>
+    <select [(ngModel)]="formcontact" name="formcontact" required>
+      <option value="Email" selected>Email</option>
+      <option value="PhoneCall">Phone Call</option>
+      <option value="WhatsApp">WhatsApp</option>
+    </select>
+    <br />
+    <label for="advertisement"
+      >Would you like to receive promotional materials from us?</label
+    >
+    <br />
+    <input type="checkbox" [(ngModel)]="formpromo" name="formpromo" />
+    <p>Yes, I would like to receive it.</p>
+    <br />
+    <!--disable the submit button when the form conditions are invalid-->
+    <input type="submit" [disabled]="!add2Form.valid" />
+    <br />
+    <button type="submit" (click)="fun2(add2Form)">Reset This Form</button>
+  </fieldset>
+</form>
+<br />
+Name: {{ formname }}

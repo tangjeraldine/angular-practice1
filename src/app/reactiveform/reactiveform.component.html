@@ -1,0 +1,64 @@
+<p>reactiveform works!</p>
+
+<form [formGroup]="addReactF">
+  <fieldset>
+    <legend>REACTIVE FORMS</legend>
+    <button>Reset</button>
+    <br />
+    <label>First Name: </label>
+    <input type="text" formControlName="fn" (keyup)="valchange()" />
+    <small
+      *ngIf="
+        addReactF.get('fn')?.hasError('required') &&
+        addReactF.get('fn')?.touched
+      "
+      style="color: red"
+      >This input cannot be empty!</small
+    >
+    <small *ngIf="addReactF.get('fn')?.hasError('minlength')" style="color: red"
+      >Has to be at least 5 characters long.</small
+    >
+    <small *ngIf="addReactF.get('fn')?.hasError('maxlength')" style="color: red"
+      >Maximum of 20 characters allowed.</small
+    >
+    <br />
+    <label>Last Name: </label>
+    <input type="text" formControlName="ln" (keyup)="statchange()" />
+    <small
+      *ngIf="
+        addReactF.get('ln')?.hasError('required') &&
+        addReactF.get('ln')?.touched
+      "
+      style="color: red"
+      >This input cannot be empty!</small
+    >
+    <small *ngIf="addReactF.get('ln')?.hasError('minlength')" style="color: red"
+      >Has to be at least 5 characters long.</small
+    >
+    <small *ngIf="addReactF.get('ln')?.hasError('maxlength')" style="color: red"
+      >Maximum of 20 characters allowed.</small
+    >
+    <br />
+    <label>Nickname: </label>
+    <input type="text" formControlName="nn" />
+    <br />
+    <label>Email: </label>
+    <input type="text" formControlName="em" />
+    <br />
+    <br /><br />
+    <div
+      formArrayName="users"
+      *ngFor="let control of forArray.controls; index as i"
+    >
+      <input [formControlName]="i" />
+    </div>
+    <br />
+    <button type="button" (click)="fun1()" [disabled]="!addReactF.valid">
+      Submit
+    </button>
+    <button type="button" (click)="fun2()">Print Values</button>
+    <button type="button" (click)="fun3()">Check Values</button>
+    <br /><br />
+    <button type="button" (click)="fun4()">Reset Fields</button>
+  </fieldset>
+</form>
